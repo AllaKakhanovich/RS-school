@@ -7,7 +7,7 @@ function myCreateElement() {
   
   let p = document.createElement('p');
   p.className = "message";
-  p.innerHTML = "ссылка на pull request https://github.com/AllaKakhanovich/RS-school/pull/1; часть keyboard (только цифры и англ. буквы) в системе window";
+  p.innerHTML = "ссылка на pull request  https://github.com/AllaKakhanovich/RS-school/pull/1; часть keyboard (только цифры и англ. буквы) в системе window";
   document.body.prepend(p); 
   
   const div = document.createElement('div');
