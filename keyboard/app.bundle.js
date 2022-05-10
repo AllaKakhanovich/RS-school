@@ -73,22 +73,26 @@
 "use strict";
 
 
-function myFunction() {
+function myCreateElement() {
   var area = document.createElement("textarea");
   var text = document.createTextNode("write here");
   area.appendChild(text);
   document.body.prepend(area);
   area.className = "field";
 
+  var p = document.createElement('p');
+  p.className = "message";
+  p.innerHTML = "ссылка на pull request  https://github.com/AllaKakhanovich/RS-school/pull/1; часть keyboard (только цифры и англ. буквы) в системе window";
+  document.body.prepend(p);
+
   var div = document.createElement('div');
-  div.className = "message";
-  div.innerHTML = "часть keyboard (только цифры и англ. буквы) в системе window";
-  document.body.prepend(div);
+  document.body.append(div);
+  div.id = "keyboard";
 }
 
-myFunction();
+myCreateElement();
 
-var keyboard = [96, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61, 113, 119, 101, 114, 116, 121, 117, 105, 111, 112, 91, 93, 92, 97, 115, 100, 102, 103, 104, 106, 107, 108, 59, 39, 13, 122, 120, 99, 118, 98, 110, 109, 44, 46, 47];
+var keyboard = [96, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 45, 61, 113, 119, 101, 114, 116, 121, 117, 105, 111, 112, 91, 93, 92, 97, 115, 100, 102, 103, 104, 106, 107, 108, 59, 39, 122, 120, 99, 118, 98, 110, 109, 44, 46, 47];
 
 init();
 
@@ -356,7 +360,7 @@ exports = module.exports = __webpack_require__(2)(true);
 
 
 // module
-exports.push([module.i, "#keyboard {\n  margin-left: 10px;\n  max-width: 890px;\n  display: block;\n  padding: 5px;\n  border: 2px solid #121213; }\n  #keyboard::after {\n    display: block;\n    content: '';\n    clear: both; }\n\n.letter {\n  width: 50px;\n  height: 50px;\n  margin: 4px;\n  padding: 4px;\n  float: left;\n  border: 1px solid #1b1b1b; }\n\n.active {\n  background: #bbb8b8;\n  border-radius: 12px;\n  transition: All 0.9s ease;\n  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);\n  background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)); }\n\n.field {\n  width: 890px;\n  margin-left: 10px;\n  height: 50px; }\n\n.clearfix {\n  clear: both; }\n\n.message {\n  color: black;\n  margin: 20px; }\n", "", {"version":3,"sources":["D:/RS SCHOOL TASKS/RS-school/keyboard/src/src/index.scss"],"names":[],"mappings":"AAAA;EACE,kBAAiB;EACjB,iBAAgB;EAChB,eAAa;EACb,aAAY;EACZ,0BAAiC,EAMlC;EAXD;IAOI,eAAc;IACd,YAAW;IACX,YAAW,EACZ;;AAGH;EACE,YAAW;EACX,aAAY;EACZ,YAAW;EACX,aAAY;EACZ,YAAW;EACX,0BAAiC,EAClC;;AAED;EACE,oBAAmB;EACnB,oBAAmB;EACnB,0BAAyB;EACzB,2CAA0C;EAC1C,6EAA4E,EAC7E;;AAED;EACE,aAAY;EACZ,kBAAiB;EACjB,aAAY,EACb;;AAED;EACE,YAAW,EACZ;;AAED;EACE,aAAY;EACZ,aAAY,EACb","file":"index.scss","sourcesContent":["#keyboard {\r\n  margin-left: 10px;\r\n  max-width: 890px;\r\n  display:block;\r\n  padding: 5px;\r\n  border: 2px solid rgb(18, 18, 19);\r\n  &::after {\r\n    display: block;\r\n    content: '';\r\n    clear: both;\r\n  }\r\n}\r\n\r\n.letter {\r\n  width: 50px;\r\n  height: 50px;\r\n  margin: 4px;\r\n  padding: 4px;\r\n  float: left;\r\n  border: 1px solid rgb(27, 27, 27);\r\n}\r\n\r\n.active {\r\n  background: #bbb8b8;\r\n  border-radius: 12px;\r\n  transition: All 0.9s ease;\r\n  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);\r\n  background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));\r\n}\r\n\r\n.field {\r\n  width: 890px;\r\n  margin-left: 10px;\r\n  height: 50px;\r\n}\r\n\r\n.clearfix {\r\n  clear: both;\r\n}\r\n\r\n.message {\r\n  color: black;\r\n  margin: 20px;\r\n}"],"sourceRoot":""}]);
+exports.push([module.i, "#keyboard {\n  margin-left: 10px;\n  max-width: 890px;\n  display: block;\n  padding: 5px;\n  border: 2px solid #121213; }\n  #keyboard::after {\n    display: block;\n    content: '';\n    clear: both; }\n\n.letter {\n  width: 50px;\n  height: 50px;\n  margin: 4px;\n  padding: 4px;\n  float: left;\n  border: 1px solid #1b1b1b; }\n\n.active {\n  background: #bbb8b8;\n  border-radius: 12px;\n  transition: All 0.9s ease;\n  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);\n  background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)); }\n\n.field {\n  width: 890px;\n  margin-left: 10px;\n  height: 50px; }\n\n.clearfix {\n  clear: both; }\n\n.message {\n  color: #0d0e0e;\n  margin: 20px;\n  font-size: 25px;\n  width: 600px; }\n", "", {"version":3,"sources":["D:/RS SCHOOL TASKS/RS-school/keyboard/src/src/index.scss"],"names":[],"mappings":"AAAA;EACE,kBAAiB;EACjB,iBAAgB;EAChB,eAAa;EACb,aAAY;EACZ,0BAAiC,EAMlC;EAXD;IAOI,eAAc;IACd,YAAW;IACX,YAAW,EACZ;;AAGH;EACE,YAAW;EACX,aAAY;EACZ,YAAW;EACX,aAAY;EACZ,YAAW;EACX,0BAAiC,EAClC;;AAED;EACE,oBAAmB;EACnB,oBAAmB;EACnB,0BAAyB;EACzB,2CAA0C;EAC1C,6EAA4E,EAC7E;;AAED;EACE,aAAY;EACZ,kBAAiB;EACjB,aAAY,EACb;;AAED;EACE,YAAW,EACZ;;AAED;EACE,eAAsB;EACtB,aAAY;EACZ,gBAAe;EACf,aAAY,EACb","file":"index.scss","sourcesContent":["#keyboard {\r\n  margin-left: 10px;\r\n  max-width: 890px;\r\n  display:block;\r\n  padding: 5px;\r\n  border: 2px solid rgb(18, 18, 19);\r\n  &::after {\r\n    display: block;\r\n    content: '';\r\n    clear: both;\r\n  }\r\n}\r\n\r\n.letter {\r\n  width: 50px;\r\n  height: 50px;\r\n  margin: 4px;\r\n  padding: 4px;\r\n  float: left;\r\n  border: 1px solid rgb(27, 27, 27);\r\n}\r\n\r\n.active {\r\n  background: #bbb8b8;\r\n  border-radius: 12px;\r\n  transition: All 0.9s ease;\r\n  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);\r\n  background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));\r\n}\r\n\r\n.field {\r\n  width: 890px;\r\n  margin-left: 10px;\r\n  height: 50px;\r\n}\r\n\r\n.clearfix {\r\n  clear: both;\r\n}\r\n\r\n.message {\r\n  color: rgb(13, 14, 14);\r\n  margin: 20px;\r\n  font-size: 25px;\r\n  width: 600px;\r\n}\r\n"],"sourceRoot":""}]);
 
 // exports
 
